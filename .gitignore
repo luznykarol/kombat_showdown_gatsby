@@ -93,6 +93,11 @@ StyleCopReport.xml
 *.svclog
 *.scc
 
+/public
+.DS_Store
+._.DS_Store
+._*
+
 # Chutzpah Test files
 _Chutzpah*
 

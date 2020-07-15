@@ -9,10 +9,18 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import Navigation from "./navigation/navigation"
+import Footer from "./footer/footer"
+import Background from "./background"
 import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,8 +32,10 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+    <Background page={"mainBg"}>
+      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+      <Navigation />
+
       <div
         style={{
           margin: `0 auto`,
@@ -40,7 +50,8 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-    </>
+      <Footer></Footer>
+    </Background>
   )
 }
 
