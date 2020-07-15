@@ -78,7 +78,7 @@ const Navigation = () => {
   return (
     <NavigationWrapper>
       <LogoWrap to="/">
-        <Image name="logoMain"></Image>
+        <Image loading="eager" critical="true" name="logoMain"></Image>
       </LogoWrap>
 
       <NavigationList>

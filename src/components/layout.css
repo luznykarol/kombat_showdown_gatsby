@@ -1,5 +1,5 @@
 html {
-  /* font-family: sans-serif; */
+  font-family: 'Roboto', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -7,10 +7,24 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #4b597b;
 }
 
 * {
   box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 /* article,
 aside,
