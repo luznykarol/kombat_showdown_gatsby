@@ -8,12 +8,11 @@ import Button from "../components/button/button"
 
 const IndexPage = () => (
   <Layout>
-    {/* <Background page={"mainBg"}> */}
     <SEO title="Home" />
-    <h1>Największy turniej</h1>
-    <Button sizeL linkTo={"/#"} text={"See Testimonials"} bordered>
+    <h1>Największy turniej zrzeszający Polskich graczy Mortal Kombat 11</h1>
+    {/* <Button sizeL linkTo={"/#"} text={"Zapisz się na turniej!"} bordered>
       See Testimonials
-    </Button>
+    </Button> */}
   </Layout>
 )
 

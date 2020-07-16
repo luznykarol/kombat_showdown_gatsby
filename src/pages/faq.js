@@ -16,6 +16,7 @@ const Faq = () => {
             toggleFAQ={toggleFAQ}
           ></Collapse>
         ))} */}
+        <h1>FAQ</h1>
         <CollapseWrap></CollapseWrap>
       </>
     </Layout>

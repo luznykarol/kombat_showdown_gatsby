@@ -34,22 +34,20 @@ const Layout = ({ children }) => {
 
   const Wrapper = styled.div`
     min-height: 100%;
-
-    /* Equal to height of footer */
-    /* But also accounting for potential margin-bottom of last child */
-    margin-bottom: -130px;
+    max-width: 1185px;
+    width: 100%;
+    padding: 30px 30px 0 30px;
+    margin: 0 auto -100px auto;
   `
 
   const Push = styled.div`
-    /* Equal to height of footer */
-    /* But also accounting for potential margin-bottom of last child */
-    height: 130px;
+    height: 100px;
   `
 
   return (
     <>
       <Wrapper>
-        <Background page={"mainBg"}>
+        <Background page={"subBg"}>
           {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
           <Navigation />
 
