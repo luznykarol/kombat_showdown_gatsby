@@ -14,6 +14,7 @@ import Footer from "./footer/footer"
 import Background from "./background"
 import Header from "./header"
 import "./layout.css"
+import styled from "styled-components"
 
 const Layout = ({ children }) => {
   if (typeof window !== "undefined") {
@@ -31,27 +32,47 @@ const Layout = ({ children }) => {
     }
   `)
 
-  return (
-    <Background page={"mainBg"}>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <Navigation />
+  const Wrapper = styled.div`
+    min-height: 100%;
 
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    margin-bottom: -130px;
+  `
+
+  const Push = styled.div`
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    height: 130px;
+  `
+
+  return (
+    <>
+      <Wrapper>
+        <Background page={"mainBg"}>
+          {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+          <Navigation />
+
+          <div
+            style={{
+              margin: `0 auto`,
+              maxWidth: 960,
+              padding: `0 1.0875rem 1.45rem`,
+            }}
+          >
+            <main>{children}</main>
+            {/* <footer>
+              © {new Date().getFullYear()}, Built with
+              {` `}
+              <a href="https://www.gatsbyjs.org">Gatsby</a>
+            </footer> */}
+          </div>
+        </Background>
+        <Push></Push>
+      </Wrapper>
+
       <Footer></Footer>
-    </Background>
+    </>
   )
 }
 

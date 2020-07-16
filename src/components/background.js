@@ -12,7 +12,7 @@ export const fluidImageBg = graphql`
   }
 `
 
-const Background = ({ children, page, shapes }) => {
+const Background = ({ children, page, shapes, className }) => {
   const data = useStaticQuery(graphql`
     query {
       mainBg: file(relativePath: { eq: "background.png" }) {
@@ -22,7 +22,8 @@ const Background = ({ children, page, shapes }) => {
   `)
   return (
     <BackgroundImage
-      // className={`${styles.topPageBg}`}
+      // className="dupa"
+      // className={className}
       fluid={data[page].childImageSharp.fluid}
       backgroundColor={`white`}
       style={{

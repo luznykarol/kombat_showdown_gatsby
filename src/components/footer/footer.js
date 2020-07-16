@@ -13,6 +13,7 @@ const FooterWrap = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 130px;
 `
 
 const SocialList = styled.ul`
@@ -29,6 +30,8 @@ const SocialWrap = styled.div`
   max-width: 350px;
   width: 100%;
   align-items: center;
+
+  justify-content: flex-end;
 `
 
 const SocialText = styled.p`
@@ -48,7 +51,7 @@ const SocialLink = styled.a`
   position: relative;
 
   &:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     transition: 0.3s all ease;
   }
   svg {

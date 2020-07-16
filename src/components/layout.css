@@ -4,10 +4,19 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #4b597b;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
+
+#___gatsby, #gatsby-focus-wrapper {
+  height: 100%;
 }
 
 * {
