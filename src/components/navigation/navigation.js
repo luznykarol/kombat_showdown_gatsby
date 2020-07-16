@@ -12,9 +12,6 @@ const NavigationWrapper = styled.nav`
   justify-content: center;
   font-family: "Montserrat";
 `
-// const LogoWrap = styled.a`
-
-// `
 
 const LogoWrap = styled(props => <Link {...props} />)`
   height: 200px;
@@ -26,6 +23,7 @@ const Logo = styled.span`
   font-weight: 700;
   font-size: 20px;
 `
+
 const NavigationList = styled.ul`
   margin: 0;
   padding: 0;
@@ -36,41 +34,45 @@ const NavigationList = styled.ul`
   align-items: center;
   width: 100%;
 `
-const NavigationBtn = styled.div`
-  padding: 15px;
-  max-width: 192px;
-  heigth: 50px;
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border: 2px solid #fff;
-  color: #fff;
-  text-shadow: 0 2px 9px #8963e3;
-  font-weight: 600;
-  box-shadow: 0 13px 19px 0 rgba(144, 127, 249, 0.39);
-  a {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-  }
-`
+
 const NavigationListItem = styled.li`
   font-weight: 600;
-  font-size: 16px;
-  ${"" /* margin-left: 30px; */}
+  font-size: 18px;
 
   &:not(:first-of-type) {
     margin-left: 30px;
   }
   a {
     text-decoration: none;
+    position: relative;
     color: #fff;
     text-shadow: 0 2px 9px #8963e3;
+
+    &:after {
+      position: absolute;
+      display: block;
+      transform: scaleX(0);
+      bottom: -2px;
+      left: 0;
+      background: #fff;
+      width: 100%;
+      content: "";
+      height: 2px;
+      transition: transform 250ms ease-in-out;
+      transform-origin: 100% 50%;
+    }
+
+    &:hover {
+      background-position: 0%;
+      background-size: 340% 100%;
+
+      &:after {
+        background: #fff;
+        transform: scaleX(1);
+        transform-origin: 0 50%;
+      }
+    }
+  }
   }
 `
 
@@ -83,21 +85,23 @@ const Navigation = () => {
 
       <NavigationList>
         <NavigationListItem>
-          <Link to="/about">O nas </Link>
+          <Link activeClassName="activeLink" to="/about">
+            O nas{" "}
+          </Link>
         </NavigationListItem>
         <NavigationListItem>
-          <Link to="/faq">FAQ</Link>
+          <Link activeClassName="activeLink" to="/faq">
+            FAQ
+          </Link>
         </NavigationListItem>
         <NavigationListItem>
-          <Link to="/rules">Regulamin</Link>
+          <Link activeClassName="activeLink" to="/rules">
+            Regulamin
+          </Link>
         </NavigationListItem>
         <NavigationListItem>
           <Link>Kontakt</Link>
         </NavigationListItem>
-        {/* <NavigationBtn>
-          Zapisz się!
-          <Link to="#footer"></Link>
-        </NavigationBtn> */}
       </NavigationList>
     </NavigationWrapper>
   )

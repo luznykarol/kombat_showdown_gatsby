@@ -26,7 +26,10 @@ html, body {
 a {
   cursor: pointer;
 }
-
+.dupa {
+  background: red;
+  color: blue;
+}
 ul {
   padding: 0;
   margin: 0;
@@ -35,6 +38,32 @@ ul {
 p {
   margin: 0;
 }
+
+
+.activeLink {
+  position: relative;
+&:before {
+  position: absolute;
+  display: block;
+  bottom: -2px;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  content: "";
+  height: 2px;
+}
+
+}
+
+@keyframes moveToRight {
+  from {
+    left: -120px;
+  }
+  to {
+    left: 110%;
+  }
+}
+
 /* article,
 aside,
 details,

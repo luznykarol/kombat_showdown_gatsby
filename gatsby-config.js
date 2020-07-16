@@ -15,6 +15,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-less`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {

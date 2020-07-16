@@ -13,7 +13,7 @@ import Navigation from "./navigation/navigation"
 import Footer from "./footer/footer"
 import Background from "./background"
 import Header from "./header"
-import "./layout.css"
+import "./layout.less"
 import styled from "styled-components"
 
 const Layout = ({ children }) => {

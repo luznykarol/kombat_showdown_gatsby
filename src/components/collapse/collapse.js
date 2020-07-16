@@ -10,6 +10,7 @@ const CollapseItem = styled.div`
   border-radius: 5px;
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.11);
   position: relative;
+  cursor: pointer;
 `
 
 const CollapseTitle = styled.p`
