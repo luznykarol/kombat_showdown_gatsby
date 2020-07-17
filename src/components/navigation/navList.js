@@ -50,6 +50,7 @@ const NavigationListItem = styled.li`
       height: 2px;
       transition: transform 250ms ease-in-out;
       transform-origin: 100% 50%;
+      box-shadow: 0 2px 9px #8963e3;
     }
 
     &:hover {

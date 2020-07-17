@@ -1,22 +1,22 @@
 import React from "react"
 import styled from "styled-components"
 import Image from "../image/image"
-import { Link } from "gatsby"
 
 const Footer = styled.footer`
   z-index: 1;
   position: relative;
   background-color: #fff;
   width: 100%;
-  height: 100px;
+  ${"" /* height: 100px; */}
   display: flex;
   align-items: center;
+  margin: 80px auto 0 auto;
 `
 
 const FooterWrap = styled.div`
   max-width: 1185px;
   width: 100%;
-  padding: 0 30px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;

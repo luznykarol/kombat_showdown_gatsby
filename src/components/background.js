@@ -31,11 +31,17 @@ const Background = ({ children, page, shapes, className }) => {
       backgroundColor={`white`}
       style={{
         // Defaults are overwrite-able by setting one or each of the following:
-        position: "",
+        // position: "absolute",
         backgroundPosition: "",
+        height: "100%",
+        position: "absolute",
+        width: "100%",
       }}
     >
-      <div className={shapes}>{children}</div>
+      {/* <div style={{ height: `100%` }} className={shapes}>
+        {children}
+      </div> */}
+      {children}
     </BackgroundImage>
   )
 }

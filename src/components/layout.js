@@ -37,39 +37,36 @@ const Layout = ({ children }) => {
     max-width: 1185px;
     width: 100%;
     padding: 30px 30px 0 30px;
-    margin: 0 auto -100px auto;
+    height: 100%;
+    ${"" /* margin: 0 auto -100px auto; */}
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
   `
 
-  const Push = styled.div`
-    height: 100px;
-  `
+  // const Push = styled.div`
+  //   height: 100px;
+  // `
 
   return (
     <>
+      <Background page={"subBg"}></Background>
       <Wrapper>
-        <Background page={"subBg"}>
-          {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-          <Navigation />
+        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+        <Navigation />
 
-          <div
-            style={{
-              margin: `0 auto`,
-              maxWidth: 960,
-              padding: `0 1.0875rem 1.45rem`,
-            }}
-          >
-            <main>{children}</main>
-            {/* <footer>
-              © {new Date().getFullYear()}, Built with
-              {` `}
-              <a href="https://www.gatsbyjs.org">Gatsby</a>
-            </footer> */}
-          </div>
-        </Background>
-        <Push></Push>
+        <div
+          style={{
+            height: `100%`,
+            margin: `0 auto`,
+            maxWidth: 960,
+          }}
+        >
+          <main>{children}</main>
+        </div>
+        {/* <Push></Push> */}
       </Wrapper>
-
-      <Footer></Footer>
+      <Footer />
     </>
   )
 }

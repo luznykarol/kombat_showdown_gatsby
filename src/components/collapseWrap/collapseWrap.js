@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Collapse from "../collapse/collapse"
 import styled from "styled-components"
 const Wrapper = styled.div`
-  margin: 100px auto auto;
+  margin: 0 auto;
 `
 const CollapseWrap = () => {
   const [faqs, setFaqs] = useState([

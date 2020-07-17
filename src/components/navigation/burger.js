@@ -5,9 +5,6 @@ import NavList from "./navList"
 const StyledBurger = styled.div`
   width: 33px;
   height: 24px;
-  ${"" /* position: fixed;
-  top: 15px;
-  right: 20px; */}
   position: relative;
   z-index: 20;
   display: none;
@@ -26,7 +23,6 @@ const StyledBurger = styled.div`
     height: 3px;
     &:nth-child(1) {
       top: 0;
-
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
     &:nth-child(2) {
