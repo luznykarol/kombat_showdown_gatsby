@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import { Formik, Field, Form, ErrorMessage } from "formik"
 import * as Yup from "yup"
 import styled from "styled-components"
 import emailjs from "emailjs-com"
-import Button from "../button/button"
+
 import Card from "../card/card"
 // require("dotenv").config()
+
+// import Button from "../button/button"
 
 console.log(process.env.GATSBY_API_URL)
 
@@ -48,6 +50,8 @@ const validationSchema = Yup.object().shape({
 })
 
 const FormRegister = () => {
+  const [emailSent, setEmailSent] = useState(false)
+
   console.log("gowno", process.env.GATSBY_API_URL)
 
   return (
@@ -55,9 +59,34 @@ const FormRegister = () => {
       <Formik
         initialValues={{ name: "", email: "" }}
         validationSchema={validationSchema}
+        onSubmit={(values, { setSubmitting, actions, resetForm }) => {
+          setSubmitting(true)
+
+          emailjs
+            // .send("gmail", "tkstest", values, process.env.GATSBY_API_URL)
+            .send(
+              "gmail",
+              "tkstest",
+              {
+                from_name: values.name,
+                reply_to: values.email,
+              },
+              process.env.GATSBY_API_URL
+            )
+            .then(resetForm())
+            .catch()
+        }}
       >
-        {({ values, errors, touched, handleChange, handleBlur }) => (
-          <form>
+        {({
+          values,
+          errors,
+          touched,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          isSubmitting,
+        }) => (
+          <Form id="contactForm" onSubmit={handleSubmit}>
             <InputRow>
               <label htmlFor="name">Nick</label>
               <input
@@ -74,7 +103,7 @@ const FormRegister = () => {
             </InputRow>
             <InputRow>
               <label htmlFor="email">Email</label>
-              <Field
+              <input
                 type="email"
                 name="email"
                 id="email"
@@ -92,9 +121,9 @@ const FormRegister = () => {
               />
             </InputRow>
             <InputRow>
-              <button>Zapisz się</button>
+              <button disabled={isSubmitting}> Zapisz się</button>
             </InputRow>
-          </form>
+          </Form>
         )}
       </Formik>
     </Card>
