@@ -14,13 +14,14 @@ const StyledBurger = styled.div`
     flex-flow: column nowrap;
   }
   span {
-    background-color: ${({ open }) => (open ? "#ccc" : "#fff")};
+    background-color: ${({ open }) => (open ? "#fff" : "#fff")};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
     position: absolute;
     width: 100%;
     height: 3px;
+    box-shadow: 0 2px 9px #8963e3;
     &:nth-child(1) {
       top: 0;
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};

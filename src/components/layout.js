@@ -15,6 +15,7 @@ import Background from "./background"
 import Header from "./header"
 import "./layout.less"
 import styled from "styled-components"
+import colors from "../variables/colors"
 
 const Layout = ({ children }) => {
   if (typeof window !== "undefined") {
@@ -42,6 +43,10 @@ const Layout = ({ children }) => {
     margin: 0 auto;
     position: relative;
     z-index: 100;
+
+    @media (max-width: 414px) {
+      padding: 20px 20px 0;
+    }
   `
 
   // const Push = styled.div`

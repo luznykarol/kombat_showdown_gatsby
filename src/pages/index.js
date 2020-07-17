@@ -1,11 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
-import Image from "../components/image/image"
-import SEO from "../components/seo"
-import Background from "../components/background"
-import Button from "../components/button/button"
 
+import Layout from "../components/layout"
+
+import SEO from "../components/seo"
+
+import FormRegister from "../components/form/form"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -13,6 +12,7 @@ const IndexPage = () => (
     {/* <Button sizeL linkTo={"/#"} text={"Zapisz się na turniej!"} bordered>
       See Testimonials
     </Button> */}
+    <FormRegister></FormRegister>
   </Layout>
 )
 

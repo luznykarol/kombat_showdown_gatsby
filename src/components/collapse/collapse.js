@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Card from "../card/card"
 
 const CollapseItem = styled.div`
   max-width: 700px;
@@ -42,7 +43,7 @@ const CollapseText = styled.div`
 
 const Collapse = ({ faq, index, toggleFAQ }) => {
   return (
-    <CollapseItem key={index} onClick={() => toggleFAQ(index)}>
+    <Card listed clickable key={index} onClick={() => toggleFAQ(index)}>
       <CollapseIcon open={faq.open}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path
@@ -54,7 +55,7 @@ const Collapse = ({ faq, index, toggleFAQ }) => {
       </CollapseIcon>
       <CollapseTitle>{faq.question}</CollapseTitle>
       <CollapseText open={faq.open}>{faq.answer}</CollapseText>
-    </CollapseItem>
+    </Card>
   )
 }
 

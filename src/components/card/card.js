@@ -8,23 +8,35 @@ const CardBody = styled.div`
   padding: 16px;
   min-height: 20px;
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.11);
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: ${({ small }) => (small === true ? "500px" : "700px")};
+  margin: ${({ listed }) => (listed === true ? "16px auto 0 auto" : "0 auto")};
   position: relative;
-  ${"" /* cursor: ${({ clickable }) => (clickable ? "pointer" : "")} */}
-    ${
-      "" /* cursor: ${props => {
-    props.clickable ? "pointer" : "default"
-  }}; */
-    }
-    ${
-      "" /* transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")}; */
-    };
   cursor: ${({ clickable }) => (clickable === true ? "pointer" : "default")};
-`
 
-const Card = ({ children, clickable }) => {
-  return <CardBody clickable={clickable}>{children}</CardBody>
+  > span {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    height: 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: red;
+    width: 100%;
+  }
+`
+const Card = ({ children, clickable, onClick, listed, small, topLine }) => {
+  return (
+    <CardBody
+      small={small}
+      listed={listed}
+      onClick={onClick}
+      clickable={clickable}
+    >
+      {topLine && <span></span>}
+
+      {children}
+    </CardBody>
+  )
 }
 
 export default Card

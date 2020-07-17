@@ -126,7 +126,7 @@ const Nav = styled.nav`
 const LogoWrap = styled(props => <Link {...props} />)`
   max-width: 160px;
   width: 100%;
-  z-index: 10;
+  z-index: 11;
   position: relative;
 `
 

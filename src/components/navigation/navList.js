@@ -11,17 +11,34 @@ const Ul = styled.ul`
   }
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: #0d2538;
+    z-index: 10;
+    background-color: rgba(75, 89, 123, 0.94);
     position: fixed;
     transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
     top: 0;
     right: 0;
     height: 100vh;
     width: 100%;
-    padding-top: 30px;
+    justify-content: center;
+    ${"" /* padding-top: 150px; */}
     transition: transform 0.3s ease-in-out;
     li {
       color: #fff;
+      padding: 32px 10px;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        border-radius: 3px;
+        background: #fff;
+        bottom: -10px;
+        left: 0;
+      }
+      a {
+        font-size: 24px;
+      }
     }
   }
 `
@@ -67,6 +84,18 @@ const NavigationListItem = styled.li`
   }
 `
 
+const NavLine = styled.span`
+  ${"" /* width: 100px;
+  margin: 0 auto;
+  height: 2px;
+  background: #fff;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  } */}
+`
+
 const NavList = ({ open }) => {
   return (
     <Ul open={open}>
@@ -75,19 +104,23 @@ const NavList = ({ open }) => {
           O nas{" "}
         </Link>
       </NavigationListItem>
+      <NavLine></NavLine>
       <NavigationListItem>
         <Link activeClassName="activeLink" to="/faq">
           FAQ
         </Link>
       </NavigationListItem>
+      <NavLine></NavLine>
       <NavigationListItem>
         <Link activeClassName="activeLink" to="/rules">
           Regulamin
         </Link>
       </NavigationListItem>
+      <NavLine></NavLine>
       <NavigationListItem>
-        <Link>Kontakt</Link>
+        <Link to="#contact">Kontakt</Link>
       </NavigationListItem>
+      <NavLine></NavLine>
     </Ul>
   )
 }
