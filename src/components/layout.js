@@ -34,7 +34,8 @@ const Layout = ({ children }) => {
   `)
 
   const Wrapper = styled.div`
-    min-height: 100%;
+    ${"" /* min-height: 100%; */}
+    min-height: 913px;
     max-width: 1185px;
     width: 100%;
     padding: 30px 30px 0 30px;

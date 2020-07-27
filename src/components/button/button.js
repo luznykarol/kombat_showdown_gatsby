@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-const Buttona = styled.button`
+const ButtonGradient = styled.button`
   padding: 0 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -11,48 +11,107 @@ const Buttona = styled.button`
   align-items: center;
   position: relative;
   -webkit-font-smoothing: antialiased !important;
+  color: #fff;
+  text-shadow: 0 2px 9px #8963e3;
   width: 100%;
   height: 50px;
   text-transform: uppercase;
   font-size: 12px;
+  box-shadow: 0 2px 9px #8963e3;
   font-weight: 900;
   letter-spacing: 0.83px;
   line-height: 12px;
   max-width: 220px;
   width: 100%;
   margin: 0 auto;
+  background-image: linear-gradient(-45deg, #111167 0%, #5f79f6 100%);
+  border: none;
+  outline: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    transition: 0.3s all ease;
+  }
 `
-const Button = ({ text, bordered, linkTo, sizeL }) => (
+
+const ButtonLink = styled(props => <Link {...props} />)`
+  padding: 0 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  -webkit-font-smoothing: antialiased !important;
+  color: #fff;
+  text-shadow: 0 2px 9px #8963e3;
+  width: 100%;
+  height: 50px;
+  text-transform: uppercase;
+  font-size: 12px;
+  box-shadow: 0 2px 9px #8963e3;
+  font-weight: 900;
+  letter-spacing: 0.83px;
+  line-height: 12px;
+  max-width: 220px;
+  width: 100%;
+  margin: 0 auto;
+  margin: ${({ buttonCenter }) => (buttonCenter ? " 0 auto" : "0")};
+  background: transparent;
+  border: 2px solid #fff;
+  &:hover {
+    transform: translateY(-2px);
+    transition: 0.3s all ease;
+  }
+`
+
+const ButtonLinkGradient = styled(props => <Link {...props} />)`
+  padding: 0 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  -webkit-font-smoothing: antialiased !important;
+  color: #fff;
+  text-shadow: 0 2px 9px #8963e3;
+  width: 100%;
+  height: 50px;
+  text-transform: uppercase;
+  font-size: 12px;
+  box-shadow: 0 2px 9px #8963e3;
+  font-weight: 900;
+  letter-spacing: 0.83px;
+  line-height: 12px;
+  max-width: 220px;
+  width: 100%;
+  margin: ${({ buttonCenter }) => (buttonCenter ? " 0 auto" : "0")};
+  background-image: linear-gradient(-45deg, #111167 0%, #5f79f6 100%);
+
+  &:hover {
+    transform: translateY(-2px);
+    transition: 0.3s all ease;
+  }
+`
+
+const Button = ({ text, buttonCenter, bordered, linkTo, sizeL }) => (
   <>
-    {/* {linkTo ? (
+    {linkTo ? (
       bordered ? (
-        <div
-          className={`${styles.btnBordered} ${
-            sizeL ? styles.btnL : styles.btnM
-          }`}
-        >
-          <div className={styles.btnMask}>
-            <span className={styles.btnBorderedText}>
-              {text}
-              <div className={styles.arrowPink}></div>
-            </span>
-            <Link to={linkTo} className="linkDiv"></Link>
-          </div>
-        </div>
-      ) : (
-        <a
-          href={linkTo}
-          className={`${styles.btnGradient} ${
-            sizeL ? styles.btnL : styles.btnM
-          }`}
-        >
+        <ButtonLink buttonCenter={buttonCenter} to={linkTo}>
           {text}
-          <div className={styles.arrowWhite}></div>
-        </a>
+        </ButtonLink>
+      ) : (
+        <ButtonLinkGradient buttonCenter={buttonCenter} to={linkTo}>
+          {text}
+        </ButtonLinkGradient>
       )
-    ) : ( */}
-    <Buttona type={"submit"}>{text}</Buttona>
-    {/* )} */}
+    ) : (
+      <ButtonGradient buttonCenter={buttonCenter} type="submit">
+        {text}
+      </ButtonGradient>
+    )}
   </>
 )
 export default Button

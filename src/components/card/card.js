@@ -5,7 +5,8 @@ const CardBody = styled.div`
   background-color: #fff;
   border-radius: 5px;
   width: 100%;
-  padding: 16px;
+  padding: ${({ titleBox }) =>
+    titleBox === true ? "100px 16px 0 16px" : "16px"};
   min-height: 20px;
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.11);
   max-width: ${({ small }) => (small === true ? "500px" : "700px")};
@@ -15,16 +16,30 @@ const CardBody = styled.div`
 
   > span {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
-    height: 4px;
+    height: 60px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: red;
+    background-image: linear-gradient(-45deg, #111167 0%, #5f79f6 100%);
     width: 100%;
+    color: #fff;
+    text-shadow: 0 2px 9px #8963e3;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    align-items: center;
   }
 `
-const Card = ({ children, clickable, onClick, listed, small, topLine }) => {
+const Card = ({
+  titleBox,
+  title,
+  children,
+  clickable,
+  onClick,
+  listed,
+  small,
+}) => {
   return (
     <CardBody
       small={small}
@@ -32,7 +47,7 @@ const Card = ({ children, clickable, onClick, listed, small, topLine }) => {
       onClick={onClick}
       clickable={clickable}
     >
-      {topLine && <span></span>}
+      {titleBox && <span>{title}</span>}
 
       {children}
     </CardBody>

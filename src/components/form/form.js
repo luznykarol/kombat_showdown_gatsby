@@ -13,7 +13,7 @@ const InputRow = styled.div`
   margin: 0 auto;
   color: #ed4337;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 11px;
   min-height: 80px;
 
   &:last-of-type {
@@ -54,9 +54,15 @@ const FormRegister = () => {
   console.log("gowno", process.env.GATSBY_API_URL)
 
   return (
-    <Card small>
+    <Card titleBox title="Formularz zgłoszeniowy" small>
       {emailSent ? (
-        <p>duoa</p>
+        <>
+          <h3 style={{ textAlign: "center" }}>Dziękujemy za zgłoszenie!</h3>
+          <p style={{ textAlign: "center" }}>
+            Na podany adres mailowy wysłaliśmy potwierdzenie oraz instrukcję co
+            zrobić dalej aby wziąć udział w turnieju
+          </p>
+        </>
       ) : (
         <Formik
           initialValues={{ name: "", email: "", team: "" }}
@@ -89,7 +95,13 @@ const FormRegister = () => {
             handleSubmit,
             isSubmitting,
           }) => (
-            <Form id="contactForm" onSubmit={handleSubmit}>
+            <Form
+              style={{
+                margin: `60px auto 0 auto`,
+              }}
+              id="contactForm"
+              onSubmit={handleSubmit}
+            >
               <InputRow>
                 <label htmlFor="email">Email</label>
                 <input
@@ -142,11 +154,7 @@ const FormRegister = () => {
                 />
               </InputRow>
 
-              <Button
-                text="Zapisz się!"
-                type="submit"
-                disabled={isSubmitting}
-              />
+              <Button text="Zapisz się" disabled={isSubmitting} />
             </Form>
           )}
         </Formik>

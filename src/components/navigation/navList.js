@@ -101,7 +101,7 @@ const NavList = ({ open }) => {
     <Ul open={open}>
       <NavigationListItem>
         <Link activeClassName="activeLink" to="/about">
-          O nas{" "}
+          O turnieju
         </Link>
       </NavigationListItem>
       <NavLine></NavLine>
