@@ -15,9 +15,9 @@ const CardBody = styled.div`
 
   > span {
     position: absolute;
-    top: -1px;
+    top: 0;
     left: 0;
-    height: 3px;
+    height: 4px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: red;

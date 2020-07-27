@@ -1,10 +1,30 @@
 import React from "react"
-import styles from "./button.module.less"
+import styled from "styled-components"
 import { Link } from "gatsby"
 
+const Buttona = styled.button`
+  padding: 0 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  -webkit-font-smoothing: antialiased !important;
+  width: 100%;
+  height: 50px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.83px;
+  line-height: 12px;
+  max-width: 220px;
+  width: 100%;
+  margin: 0 auto;
+`
 const Button = ({ text, bordered, linkTo, sizeL }) => (
   <>
-    {linkTo ? (
+    {/* {linkTo ? (
       bordered ? (
         <div
           className={`${styles.btnBordered} ${
@@ -30,14 +50,9 @@ const Button = ({ text, bordered, linkTo, sizeL }) => (
           <div className={styles.arrowWhite}></div>
         </a>
       )
-    ) : (
-      <button
-        type={"submit"}
-        className={`${styles.btnGradient} ${sizeL ? styles.btnL : styles.btnM}`}
-      >
-        {text}
-      </button>
-    )}
+    ) : ( */}
+    <Buttona type={"submit"}>{text}</Buttona>
+    {/* )} */}
   </>
 )
 export default Button
