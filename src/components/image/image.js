@@ -38,6 +38,9 @@ const Image = props => {
       logoTitle: file(relativePath: { eq: "logotitle.png" }) {
         ...fluidImage
       }
+      dragon: file(relativePath: { eq: "icons/szmok.png" }) {
+        ...fluidImage
+      }
     }
   `)
 

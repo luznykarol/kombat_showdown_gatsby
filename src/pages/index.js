@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import FormRegister from "../components/form/form"
 
 import Button from "../components/button/button"
+import Hexagon from "../components/hexagon/hexagon"
 import styled from "styled-components"
 
 const ButtonWrap = styled.div`
@@ -16,6 +17,18 @@ const ButtonWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 520px) {
+    flex-direction: column;
+
+    a {
+      max-width: 400px;
+
+      &:last-of-type {
+        margin: 24px auto 0 auto;
+      }
+    }
+  }
 `
 
 const IndexPage = () => (
@@ -29,7 +42,8 @@ const IndexPage = () => (
     {/* <Button sizeL linkTo={"/#"} text={"Zapisz się na turniej!"} bordered>
       See Testimonials
     </Button> */}
-    <FormRegister></FormRegister>
+
+    <FormRegister />
   </Layout>
 )
 

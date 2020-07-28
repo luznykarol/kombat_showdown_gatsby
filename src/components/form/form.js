@@ -7,6 +7,11 @@ import emailjs from "emailjs-com"
 import Card from "../card/card"
 
 import Button from "../button/button"
+
+const dupa =
+  "https://www.instagram.com/graphql/query/?query_hash=7223fb3539e10cad7900c019401669e7&variables=%7B%22only_stories%22%3Atrue%2C%22stories_prefetch%22%3Afalse%2C%22stories_video_dash_manifest%22%3Afalse%7D"
+const dupa2 =
+  "https://www.instagram.com/graphql/query/?query_hash=15bf78a4ad24e33cbd838fdb31353ac1&variables=%7B%22id%22%3A%22661234114%22%2C%22first%22%3A12%2C%22after%22%3A%22QVFCN1pSbkZ5VTFCb1ZkWUVZUUxOMnM5bThucGpuQTQ4ZTc4RnJaZ0RCQ3JaUkluQXp2VDRSdDJoQWJwdmRBeFd4UGxZZlRtOHBlOUY4bFpObFJLT2FZdA%3D%3D%22%7D"
 // require("dotenv").config()
 
 const InputRow = styled.div`

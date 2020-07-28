@@ -9,6 +9,7 @@ const Footer = styled.footer`
   width: 100%;
   ${"" /* height: 100px; */}
   display: flex;
+  box-shadow: 0 -4px 9px #8963e3;
   align-items: center;
   margin: 80px auto 0 auto;
 `
@@ -21,6 +22,11 @@ const FooterWrap = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+
+  @media (max-width: 520px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `
 
 const SocialList = styled.ul`
@@ -39,9 +45,27 @@ const SocialWrap = styled.div`
   align-items: center;
 
   justify-content: flex-end;
+
+  @media (max-width: 520px) {
+    justify-content: center;
+    margin: 24px auto 0 auto;
+    p {
+      display: none;
+    }
+  }
 `
 
 const SocialText = styled.p`
+  font-size: 16px;
+  font-weight: 600;
+`
+
+const ContactLink = styled.a`
+  font-size: 14px;
+  font-weight: 600;
+`
+
+const SocialMail = styled.a`
   font-size: 16px;
   font-weight: 600;
 `
@@ -110,8 +134,21 @@ const SocialFacebook = styled(SocialLink)`
 const LogoWrap = styled.div`
   width: 100px;
   height: 70px;
-  positon: relative;
+  ${"" /* positon: relative; */}
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  ${"" /* @media (max-width: 520px) {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  } */}
 `
+
+const RightWrap = styled.div``
 
 const Navigation = () => {
   return (
@@ -120,8 +157,12 @@ const Navigation = () => {
         <LogoWrap>
           <Image name="logoMain"></Image>
         </LogoWrap>
+        <ContactLink href="mailto:thekombatshowdown@gmail.com">
+          thekombatshowdown@gmail.com
+        </ContactLink>
+
         <SocialWrap>
-          <SocialText>Znajdź nas na:</SocialText>
+          {/* <SocialText>Znajdź nas na:</SocialText> */}
           <SocialList>
             <SocialTwitch>
               <svg

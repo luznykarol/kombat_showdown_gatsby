@@ -8,7 +8,7 @@ const CardBody = styled.div`
   padding: ${({ titleBox }) =>
     titleBox === true ? "100px 16px 0 16px" : "16px"};
   min-height: 20px;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.11);
+  box-shadow: 0 2px 9px #8963e3;
   max-width: ${({ small }) => (small === true ? "500px" : "700px")};
   margin: ${({ listed }) => (listed === true ? "16px auto 0 auto" : "0 auto")};
   position: relative;

@@ -26,16 +26,7 @@ const Ul = styled.ul`
       color: #fff;
       padding: 32px 10px;
       position: relative;
-      &:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        border-radius: 3px;
-        background: #fff;
-        bottom: -10px;
-        left: 0;
-      }
+
       a {
         font-size: 24px;
       }
@@ -118,7 +109,9 @@ const NavList = ({ open }) => {
       </NavigationListItem>
       <NavLine></NavLine>
       <NavigationListItem>
-        <Link to="#contact">Kontakt</Link>
+        <Link exact to="#contact">
+          Kontakt
+        </Link>
       </NavigationListItem>
       <NavLine></NavLine>
     </Ul>

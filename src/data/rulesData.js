@@ -5,7 +5,7 @@ const rulesData = {
     text: [
       `1.Turniej będzie odbywał się w systemie Double Elimination (Grupy + Top8).`,
       `2.W grupach mecze odbywają się systemem FT2, natomiast w top8 FT3.`,
-      `3.Awans do top8 uzyskuje 2-óch najlepszych graczy, jeden awansuje do winners bracket, a drugi do losers bracket.`,
+      `3.Awans do top8 uzyskuje 2-óch najlepszych graczy, jeden awansuje do winners bracket, a\u00A0drugi do losers bracket.`,
       `4.Turniej odbędzie się 23.05.2020 (sobota)`,
     ],
   },
@@ -24,14 +24,14 @@ const rulesData = {
       `Jeśli mecz został przerwany w momencie gdy jeden z graczy miał zostać zabity – traci on rundę. Jeśli sytuacja powtórzy się – przegrywa walkę.`,
       `Jeśli mecz został przerwany przez osobę mająca przewagę w punktach życia, osoba która się rozłączy powinna przedstawić krótki filmik bądź screenshota, potwierdzającego sytuację. Gracze wracają wówczas do stanu walki sprzed rozłączenia. Jeśli sytuacja się powtórzy – gracz traci rundę, za trzecim – zostaje wydalony z turnieju.`,
       `
-Jeżeli w ciągu całego turnieju gracz zostanie zgłoszony przez 3 graczy, z powodu występowania lagów w trakcie walki – musi on przeprowadzić test szybkości Internetu i jego rezultat wysłać do organizatora. Jeżeli test wykaże że minimalna prędkość pobierania wyniesie przynajmniej 5mb/s, to uznaje się, że gracz jest zdolny do kontynuowania turnieju.`,
+Jeżeli w ciągu całego turnieju gracz zostanie zgłoszony przez 3 graczy, z powodu występowania lagów w trakcie walki – musi on przeprowadzić test szybkości Internetu i\u00A0jego rezultat wysłać do organizatora. Jeżeli test wykaże że minimalna prędkość pobierania wyniesie przynajmniej 5mb/s, to uznaje się, że gracz jest zdolny do\u00A0kontynuowania turnieju.`,
     ],
   },
   punctuality: {
     title: "Punktualność",
     text: [
       "1.Gracze mają 15 minut aby zgłosić się na swój mecz od momentu jego wystartowania. Jeżeli z danej pary przeciwnik nie zjawi się w ciągu 5 minut należy zgłosić ten fakt organizatorom na kanale 'The Kombat Showdown – Wyniki'. Od tego momentu liczone jest kolejne 10 minut i jeśli w przeciągu tego czasu przeciwnik nie zjawi się, osoba oczekująca wygrywa walkę walkowerem.",
-      "2.Gracze są zobowiązani do stałego kontaktu z organizatorami poprzez specjalny kanał na platformie Discord.",
+      "2.Gracze są zobowiązani do stałego kontaktu z organizatorami poprzez specjalny kanał na\u00A0platformie Discord.",
     ],
   },
   results: {
@@ -42,9 +42,9 @@ Jeżeli w ciągu całego turnieju gracz zostanie zgłoszony przez 3 graczy, z po
     ],
   },
   rest: {
-    title: "Wyniki",
+    title: "Reszta zasad",
     text: [
-      `1.Zabronione jest spamowanie na kanałach turniejowych na których przeciwnicy stawiają się do meczu oraz zgłaszają wyniki, wszelakie luźne dyskusje będą toczyły się na kanale “The Kombat Showdown”. W przypadku nie stosowania się do powyższego organizator zastrzega sobie prawo do wydalenia takiej osoby z turnieju.`,
+      `1.Zabronione jest spamowanie na kanałach turniejowych na których przeciwnicy stawiają się do meczu oraz zgłaszają wyniki, wszelakie luźne dyskusje będą toczyły się na kanale “The\u00A0Kombat Showdown”. W przypadku nie stosowania się do powyższego organizator zastrzega sobie prawo do wydalenia takiej osoby z turnieju.`,
       `2.Organizator turnieju zastrzega sobie prawo do anulowania, zawieszenia i / lub modyfikacji zawodów lub dowolnej jego części, jeżeli jakiekolwiek oszustwo, awarie techniczne lub inne czynniki naruszają integralność lub prawidłowe funkcjonowanie zawodów.`,
       `3.Organizator zastrzega sobie prawo do zamknięcia zapisów ze względu na zbyt dużą ilość graczy, oraz na rozłożenie turnieju na 2 dni to jest 23.05 (sobota) oraz 24.05 (niedziela).`,
     ],
