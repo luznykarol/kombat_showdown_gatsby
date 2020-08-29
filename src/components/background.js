@@ -35,6 +35,7 @@ const Background = ({ children, page, shapes, className }) => {
       style={{
         // Defaults are overwrite-able by setting one or each of the following:
         // position: "absolute",
+        zIndex: "0",
         backgroundPosition: "",
         height: "100%",
         position: "absolute",

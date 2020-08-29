@@ -23,7 +23,7 @@ const FooterWrap = styled.div`
   align-items: center;
   margin: 0 auto;
 
-  @media (max-width: 520px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
   }
@@ -46,7 +46,7 @@ const SocialWrap = styled.div`
 
   justify-content: flex-end;
 
-  @media (max-width: 520px) {
+  @media (max-width: 768px) {
     justify-content: center;
     margin: 24px auto 0 auto;
     p {
@@ -77,6 +77,10 @@ const ContactLink = styled.a`
       rgb(17, 17, 103) 0%,
       rgb(95, 121, 246) 100%
     );
+  }
+
+  @media (max-width: 768px) {
+    margin: 24px auto 0 auto;
   }
 `
 
@@ -178,7 +182,11 @@ const Navigation = () => {
 
         <SocialWrap>
           <SocialList>
-            <SocialTwitch>
+            <SocialTwitch
+              href="https://m.twitch.tv/thekombatshowdown/profile"
+              target="_blank"
+              noopener="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="0.97em"

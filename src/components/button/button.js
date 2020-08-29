@@ -56,7 +56,7 @@ const ButtonLink = styled(props => <Link {...props} />)`
   max-width: 220px;
   width: 100%;
   margin: 0 auto;
-  margin: ${({ buttonCenter }) => (buttonCenter ? " 0 auto" : "0")};
+  margin: ${({ buttoncenter }) => (buttoncenter ? " 0 auto" : "0")};
   background: transparent;
   border: 2px solid #fff;
   &:hover {
@@ -86,7 +86,7 @@ const ButtonLinkGradient = styled(props => <Link {...props} />)`
   line-height: 12px;
   max-width: 220px;
   width: 100%;
-  margin: ${({ buttonCenter }) => (buttonCenter ? " 0 auto" : "0")};
+  margin: ${({ buttoncenter }) => (buttoncenter ? " 0 auto" : "0")};
   background-image: linear-gradient(-45deg, #111167 0%, #5f79f6 100%);
 
   &:hover {
@@ -95,20 +95,20 @@ const ButtonLinkGradient = styled(props => <Link {...props} />)`
   }
 `
 
-const Button = ({ text, buttonCenter, bordered, linkTo, sizeL }) => (
+const Button = ({ text, buttoncenter, bordered, linkTo, sizeL }) => (
   <>
     {linkTo ? (
       bordered ? (
-        <ButtonLink buttonCenter={buttonCenter} to={linkTo}>
+        <ButtonLink buttoncenter={buttoncenter} to={linkTo}>
           {text}
         </ButtonLink>
       ) : (
-        <ButtonLinkGradient buttonCenter={buttonCenter} to={linkTo}>
+        <ButtonLinkGradient buttoncenter={buttoncenter} to={linkTo}>
           {text}
         </ButtonLinkGradient>
       )
     ) : (
-      <ButtonGradient buttonCenter={buttonCenter} type="submit">
+      <ButtonGradient buttoncenter={buttoncenter} type="submit">
         {text}
       </ButtonGradient>
     )}

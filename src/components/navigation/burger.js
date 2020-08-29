@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import NavList from "./navList"
 
@@ -40,6 +40,14 @@ const StyledBurger = styled.div`
 const Burger = () => {
   const [open, setOpen] = useState(false)
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "initial"
+    }
+  })
+
   return (
     <>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
@@ -47,7 +55,7 @@ const Burger = () => {
         <span />
         <span />
       </StyledBurger>
-      <NavList open={open} />
+      <NavList open={open} setOpen={setOpen} />
     </>
   )
 }

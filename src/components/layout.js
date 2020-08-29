@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
     z-index: 100;
 
     @media (max-width: 414px) {
-      padding: 20px 20px 0;
+      padding: 15px 15px 0;
     }
   `
 
@@ -57,9 +57,10 @@ const Layout = ({ children }) => {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: -1;
     background-image: linear-gradient(-90deg, #02203c, #001528);
     @media (max-width: 414px) {
-      padding: 20px 20px 0;
+      padding: 15px 15px 0;
     }
   `
 
@@ -70,7 +71,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Background page={"starsbg"}></Background>
-      {/* <Bg></Bg> */}
+      <Bg></Bg>
       <Wrapper>
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <Navigation />

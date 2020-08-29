@@ -18,7 +18,7 @@ const ButtonWrap = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 520px) {
+  @media (max-width: 768px) {
     flex-direction: column;
 
     a {

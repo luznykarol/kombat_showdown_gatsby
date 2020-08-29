@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Ul = styled.ul`
   list-style: none;
@@ -73,43 +74,23 @@ const NavigationListItem = styled.li`
   }
 `
 
-const NavLine = styled.span`
-  ${"" /* width: 100px;
-  margin: 0 auto;
-  height: 2px;
-  background: #fff;
-  display: none;
-
-  @media (max-width: 768px) {
-    display: block;
-  } */}
-`
-
-const NavList = ({ open }) => {
+const NavList = ({ open, setOpen }) => {
   return (
     <Ul open={open}>
-      <NavigationListItem>
-        <Link activeClassName="activeLink" to="/about">
-          O turnieju
-        </Link>
+      <NavigationListItem onClick={() => setOpen(false)}>
+        <Link to="/about">O turnieju</Link>
       </NavigationListItem>
-      <NavLine></NavLine>
-      <NavigationListItem>
-        <Link activeClassName="activeLink" to="/faq">
+      {/* <NavigationListItem>
+        <Link  to="/faq">
           FAQ
         </Link>
+      </NavigationListItem> */}
+      <NavigationListItem onClick={() => setOpen(false)}>
+        <Link to="/rules">Regulamin</Link>
       </NavigationListItem>
-      <NavLine></NavLine>
-      <NavigationListItem>
-        <Link activeClassName="activeLink" to="/rules">
-          Regulamin
-        </Link>
+      <NavigationListItem onClick={() => setOpen(false)}>
+        <a onClick={() => scrollTo("#contact")}>Kontakt</a>
       </NavigationListItem>
-      <NavLine></NavLine>
-      <NavigationListItem>
-        <Link to="#contact">Kontakt</Link>
-      </NavigationListItem>
-      <NavLine></NavLine>
     </Ul>
   )
 }

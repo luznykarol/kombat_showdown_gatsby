@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Formik, Field, Form, ErrorMessage } from "formik"
 import * as Yup from "yup"
 import styled from "styled-components"
@@ -7,12 +7,6 @@ import emailjs from "emailjs-com"
 import Card from "../card/card"
 
 import Button from "../button/button"
-
-const dupa =
-  "https://www.instagram.com/graphql/query/?query_hash=7223fb3539e10cad7900c019401669e7&variables=%7B%22only_stories%22%3Atrue%2C%22stories_prefetch%22%3Afalse%2C%22stories_video_dash_manifest%22%3Afalse%7D"
-const dupa2 =
-  "https://www.instagram.com/graphql/query/?query_hash=15bf78a4ad24e33cbd838fdb31353ac1&variables=%7B%22id%22%3A%22661234114%22%2C%22first%22%3A12%2C%22after%22%3A%22QVFCN1pSbkZ5VTFCb1ZkWUVZUUxOMnM5bThucGpuQTQ4ZTc4RnJaZ0RCQ3JaUkluQXp2VDRSdDJoQWJwdmRBeFd4UGxZZlRtOHBlOUY4bFpObFJLT2FZdA%3D%3D%22%7D"
-// require("dotenv").config()
 
 const InputRow = styled.div`
   margin: 0 auto;
@@ -35,13 +29,19 @@ const InputRow = styled.div`
     font-size: 12px;
     width: 100%;
     font-weight: 600;
-    font-weight: 500;
     padding: 9px 16px;
     border: 2px solid rgba(75, 89, 123, 0.8);
     background: #fff;
-    ${"" /* &:last-of-type {
-      margin: 8px auto 0 auto;
-    } */}
+    transition: 0.5s all linear;
+
+    &:focus,
+    :active {
+      box-shadow: 0 0px 8px rgba(95, 121, 246, 0.8);
+    }
+
+    &:placeholder {
+      color: rgba(75, 89, 123, 0.8);
+    }
   }
   display: flex;
   flex-direction: column;
@@ -57,17 +57,24 @@ const validationSchema = Yup.object().shape({
 const FormRegister = () => {
   const [emailSent, setEmailSent] = useState(false)
 
-  console.log("gowno", process.env.GATSBY_API_URL)
-
   return (
     <Card titleBox title="Formularz zgłoszeniowy" small>
       {emailSent ? (
         <>
-          <h3 style={{ textAlign: "center" }}>Dziękujemy za zgłoszenie!</h3>
-          <p style={{ textAlign: "center" }}>
+          <h3
+            style={{
+              textAlign: "center",
+              margin: "60px auto 0 auto",
+              fontSize: "28px",
+            }}
+          >
+            Dziękujemy za zgłoszenie!
+          </h3>
+          <p style={{ textAlign: "center", margin: "8px auto 0 auto" }}>
             Na podany adres mailowy wysłaliśmy potwierdzenie oraz instrukcję co
             zrobić dalej aby wziąć udział w turnieju
           </p>
+          <Button text="Powrót" onClick={setEmailSent(!emailSent)} />
         </>
       ) : (
         <Formik
@@ -114,6 +121,7 @@ const FormRegister = () => {
                   type="email"
                   name="email"
                   id="email"
+                  noValidate
                   placeholder="Podaj swój adres email"
                   className={touched.email && errors.email ? "has-error" : null}
                   onChange={handleChange}
