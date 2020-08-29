@@ -7,11 +7,11 @@ const Footer = styled.footer`
   position: relative;
   background-color: #fff;
   width: 100%;
-  ${"" /* height: 100px; */}
   display: flex;
   box-shadow: 0 -6px 9px rgba(95, 121, 246, 0.8);
   align-items: center;
-  margin: 80px auto 0 auto;
+  margin: 100px auto 0 auto;
+  min-height: 80px;
 `
 
 const FooterWrap = styled.div`

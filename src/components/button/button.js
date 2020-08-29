@@ -95,7 +95,16 @@ const ButtonLinkGradient = styled(props => <Link {...props} />)`
   }
 `
 
-const Button = ({ text, buttoncenter, bordered, linkTo, sizeL }) => (
+const Button = ({
+  type,
+  onClick,
+  text,
+  buttoncenter,
+  bordered,
+  linkTo,
+  sizeL,
+  style,
+}) => (
   <>
     {linkTo ? (
       bordered ? (
@@ -108,7 +117,12 @@ const Button = ({ text, buttoncenter, bordered, linkTo, sizeL }) => (
         </ButtonLinkGradient>
       )
     ) : (
-      <ButtonGradient buttoncenter={buttoncenter} type="submit">
+      <ButtonGradient
+        style={style}
+        onClick={onClick}
+        type={type}
+        buttoncenter={buttoncenter}
+      >
         {text}
       </ButtonGradient>
     )}

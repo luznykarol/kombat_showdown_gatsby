@@ -59,120 +59,134 @@ const FormRegister = () => {
 
   return (
     <Card titleBox title="Formularz zgłoszeniowy" small>
-      {emailSent ? (
-        <>
-          <h3
+      <Formik
+        initialValues={{ name: "", email: "", team: "" }}
+        validationSchema={validationSchema}
+        onSubmit={(values, { setSubmitting, actions, resetForm }) => {
+          setSubmitting(true)
+
+          emailjs
+            // .send("gmail", "tkstest", values, process.env.GATSBY_API_URL)
+            .send(
+              "gmail",
+              "tkstest",
+              {
+                email: values.email,
+                name: values.name,
+                team: values.team,
+              },
+              process.env.GATSBY_API_URL
+            )
+            .then(resetForm(), setEmailSent(!emailSent))
+            .catch()
+        }}
+      >
+        {({
+          values,
+          errors,
+          touched,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          isSubmitting,
+        }) => (
+          <Form
+            noValidate
             style={{
-              textAlign: "center",
-              margin: "60px auto 0 auto",
-              fontSize: "28px",
+              margin: `60px auto 0 auto`,
             }}
+            id="contactForm"
+            onSubmit={handleSubmit}
           >
-            Dziękujemy za zgłoszenie!
-          </h3>
-          <p style={{ textAlign: "center", margin: "8px auto 0 auto" }}>
-            Na podany adres mailowy wysłaliśmy potwierdzenie oraz instrukcję co
-            zrobić dalej aby wziąć udział w turnieju
-          </p>
-          <Button text="Powrót" onClick={setEmailSent(!emailSent)} />
-        </>
-      ) : (
-        <Formik
-          initialValues={{ name: "", email: "", team: "" }}
-          validationSchema={validationSchema}
-          onSubmit={(values, { setSubmitting, actions, resetForm }) => {
-            setSubmitting(true)
-
-            emailjs
-              // .send("gmail", "tkstest", values, process.env.GATSBY_API_URL)
-              .send(
-                "gmail",
-                "tkstest",
-                {
-                  email: values.email,
-                  name: values.name,
-                  team: values.team,
-                },
-                process.env.GATSBY_API_URL
-              )
-              .then(resetForm(), setEmailSent(!emailSent))
-              .catch()
-          }}
-        >
-          {({
-            values,
-            errors,
-            touched,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            isSubmitting,
-          }) => (
-            <Form
-              style={{
-                margin: `60px auto 0 auto`,
-              }}
-              id="contactForm"
-              onSubmit={handleSubmit}
-            >
-              <InputRow>
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  noValidate
-                  placeholder="Podaj swój adres email"
-                  className={touched.email && errors.email ? "has-error" : null}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.email}
+            {!emailSent ? (
+              <>
+                <InputRow>
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Podaj swój adres email"
+                    className={
+                      touched.email && errors.email ? "has-error" : null
+                    }
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.email}
+                  />
+                  {errors.email && touched.email && errors.email}
+                  <ErrorMessage
+                    name="newEmail"
+                    component="div"
+                    className="invalid-feedback"
+                  />
+                </InputRow>
+                <InputRow>
+                  <label htmlFor="name">Nick</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Podaj swój nick"
+                    className={touched.name && errors.name ? "has-error" : null}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.name}
+                  />
+                  {errors.name && touched.name && errors.name}
+                  <ErrorMessage
+                    name="newName"
+                    component="div"
+                    className="invalid-feedback"
+                  />
+                </InputRow>
+                <InputRow>
+                  <label htmlFor="team">Tag Drużynowy</label>
+                  <input
+                    type="text"
+                    name="team"
+                    id="team"
+                    placeholder="Podaj tag swojej drużyny ( niewymagane ) "
+                    className={touched.team && errors.team ? "has-error" : null}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.team}
+                  />
+                </InputRow>
+                <Button
+                  type="submit"
+                  text="Zapisz się"
+                  disabled={isSubmitting}
                 />
-                {errors.email && touched.email && errors.email}
-                <ErrorMessage
-                  name="newEmail"
-                  component="div"
-                  className="invalid-feedback"
+              </>
+            ) : (
+              <>
+                <h4
+                  style={{
+                    textAlign: "center",
+                    margin: "60px auto 0 auto",
+                    fontSize: "24px",
+                  }}
+                >
+                  Dziękujemy za zgłoszenie!
+                </h4>
+                <p style={{ textAlign: "center", margin: "16px auto 0 auto" }}>
+                  Na podany adres mailowy wysłaliśmy potwierdzenie oraz
+                  instrukcję co zrobić dalej aby wziąć udział w turnieju
+                </p>
+                <Button
+                  style={{
+                    margin: "16px auto 0 auto",
+                  }}
+                  text={"Powrót"}
+                  type="button"
+                  onClick={() => setEmailSent(false)}
                 />
-              </InputRow>
-              <InputRow>
-                <label htmlFor="name">Nick</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Podaj swój nick"
-                  className={touched.name && errors.name ? "has-error" : null}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.name}
-                />
-                {errors.name && touched.name && errors.name}
-                <ErrorMessage
-                  name="newName"
-                  component="div"
-                  className="invalid-feedback"
-                />
-              </InputRow>
-              <InputRow>
-                <label htmlFor="team">Tag Drużynowy</label>
-                <input
-                  type="text"
-                  name="team"
-                  id="team"
-                  placeholder="Podaj tag swojej drużyny ( niewymagane ) "
-                  className={touched.team && errors.team ? "has-error" : null}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.team}
-                />
-              </InputRow>
-
-              <Button text="Zapisz się" disabled={isSubmitting} />
-            </Form>
-          )}
-        </Formik>
-      )}
+              </>
+            )}
+          </Form>
+        )}
+      </Formik>
     </Card>
   )
 }
