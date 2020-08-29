@@ -14,6 +14,7 @@ import Footer from "./footer/footer"
 import Background from "./background"
 import Header from "./header"
 import "./layout.less"
+import "../fonts/fonts.css"
 import styled from "styled-components"
 import colors from "../variables/colors"
 
@@ -50,26 +51,39 @@ const Layout = ({ children }) => {
     }
   `
 
+  const Bg = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(-90deg, #02203c, #001528);
+    @media (max-width: 414px) {
+      padding: 20px 20px 0;
+    }
+  `
+
   // const Push = styled.div`
   //   height: 100px;
   // `
 
   return (
     <>
-      <Background page={"subBg"}></Background>
+      <Background page={"starsbg"}></Background>
+      {/* <Bg></Bg> */}
       <Wrapper>
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <Navigation />
 
-        <div
+        {/* <div
           style={{
             height: `100%`,
             margin: `0 auto`,
             maxWidth: 960,
           }}
-        >
-          <main>{children}</main>
-        </div>
+        > */}
+        <main>{children}</main>
+        {/* </div> */}
         {/* <Push></Push> */}
       </Wrapper>
       <Footer />

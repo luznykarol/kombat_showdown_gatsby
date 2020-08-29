@@ -1,0 +1,14 @@
+
+@font-face {
+    font-family: 'KenyanCoffee-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('KenyanCoffee-Regular'), url('./kenyan_coffee.woff') format('woff');
+}
+      
+@font-face {
+    font-family: 'KenyanCoffee-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('KenyanCoffee-Bold'), url('./kenyan_coffee_bd.woff') format('woff');
+}

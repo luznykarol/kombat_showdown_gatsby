@@ -21,6 +21,9 @@ const Background = ({ children, page, shapes, className }) => {
       subBg: file(relativePath: { eq: "background2.png" }) {
         ...fluidImageBg
       }
+      starsbg: file(relativePath: { eq: "bg/3.png" }) {
+        ...fluidImageBg
+      }
     }
   `)
   return (

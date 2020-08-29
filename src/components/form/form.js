@@ -19,7 +19,7 @@ const InputRow = styled.div`
   color: #ed4337;
   font-weight: 500;
   font-size: 11px;
-  min-height: 80px;
+  min-height: 85px;
 
   &:last-of-type {
     margin: 0 auto;
@@ -34,9 +34,10 @@ const InputRow = styled.div`
     margin: 4px auto;
     font-size: 12px;
     width: 100%;
+    font-weight: 600;
     font-weight: 500;
     padding: 9px 16px;
-    border: 1.5px solid rgba(75, 89, 123, 0.5);
+    border: 2px solid rgba(75, 89, 123, 0.8);
     background: #fff;
     ${"" /* &:last-of-type {
       margin: 8px auto 0 auto;

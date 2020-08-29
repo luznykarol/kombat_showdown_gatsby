@@ -9,7 +9,7 @@ const Footer = styled.footer`
   width: 100%;
   ${"" /* height: 100px; */}
   display: flex;
-  box-shadow: 0 -4px 9px #8963e3;
+  box-shadow: 0 -6px 9px rgba(95, 121, 246, 0.8);
   align-items: center;
   margin: 80px auto 0 auto;
 `
@@ -63,6 +63,21 @@ const SocialText = styled.p`
 const ContactLink = styled.a`
   font-size: 14px;
   font-weight: 600;
+  background: linear-gradient(
+    -45deg,
+    rgb(17, 17, 103) 0%,
+    rgb(95, 121, 246) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 9px rgba(95, 121, 246, 0.8);
+  &:after {
+    background-image: linear-gradient(
+      -45deg,
+      rgb(17, 17, 103) 0%,
+      rgb(95, 121, 246) 100%
+    );
+  }
 `
 
 const SocialMail = styled.a`
@@ -152,7 +167,7 @@ const RightWrap = styled.div``
 
 const Navigation = () => {
   return (
-    <Footer id="footer">
+    <Footer id="contact">
       <FooterWrap>
         <LogoWrap>
           <Image name="logoMain"></Image>
@@ -162,7 +177,6 @@ const Navigation = () => {
         </ContactLink>
 
         <SocialWrap>
-          {/* <SocialText>Znajdź nas na:</SocialText> */}
           <SocialList>
             <SocialTwitch>
               <svg
@@ -177,7 +191,11 @@ const Navigation = () => {
                 />
               </svg>
             </SocialTwitch>
-            <SocialYoutube>
+            <SocialYoutube
+              target="_blank"
+              noopener="noreferrer"
+              href="https://www.youtube.com/channel/UCuSO8M8dOGKxPdNnErh0fCA"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1.13em"
@@ -190,7 +208,11 @@ const Navigation = () => {
                 />
               </svg>
             </SocialYoutube>
-            <SocialFacebook>
+            <SocialFacebook
+              target="_blank"
+              noopener="noreferrer"
+              href="https://www.facebook.com/The-Kombat-Showdown-104139237939278/?ref=page_internal"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="0.63em"
@@ -203,7 +225,11 @@ const Navigation = () => {
                 />
               </svg>
             </SocialFacebook>
-            <SocialInstagram>
+            <SocialInstagram
+              href="https://www.instagram.com/thekombatshowdown/"
+              noopener="noreferrer"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="0.88em"

@@ -39,7 +39,6 @@ const NavigationListItem = styled.li`
   font-size: 18px;
   margin: 0 auto;
 
-
   a {
     text-decoration: none;
     position: relative;
@@ -58,7 +57,7 @@ const NavigationListItem = styled.li`
       height: 2px;
       transition: transform 250ms ease-in-out;
       transform-origin: 100% 50%;
-      box-shadow: 0 2px 9px #8963e3;
+      box-shadow: 0 2px 9px rgba(95, 121, 246, 0.8);
     }
 
     &:hover {
@@ -71,7 +70,6 @@ const NavigationListItem = styled.li`
         transform-origin: 0 50%;
       }
     }
-  }
   }
 `
 
@@ -109,9 +107,7 @@ const NavList = ({ open }) => {
       </NavigationListItem>
       <NavLine></NavLine>
       <NavigationListItem>
-        <Link exact to="#contact">
-          Kontakt
-        </Link>
+        <Link to="#contact">Kontakt</Link>
       </NavigationListItem>
       <NavLine></NavLine>
     </Ul>

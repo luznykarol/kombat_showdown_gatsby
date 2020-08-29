@@ -21,7 +21,7 @@ const StyledBurger = styled.div`
     position: absolute;
     width: 100%;
     height: 3px;
-    box-shadow: 0 2px 9px #8963e3;
+    box-shadow: 0 2px 9px rgba(95, 121, 246, 0.8);
     &:nth-child(1) {
       top: 0;
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};

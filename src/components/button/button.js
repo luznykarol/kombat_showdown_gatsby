@@ -17,7 +17,7 @@ const ButtonGradient = styled.button`
   height: 50px;
   text-transform: uppercase;
   font-size: 12px;
-  box-shadow: 0 2px 9px #8963e3;
+  box-shadow: 0 2px 9px rgba(95, 121, 246, 0.8);
   font-weight: 900;
   letter-spacing: 0.83px;
   line-height: 12px;
@@ -49,7 +49,7 @@ const ButtonLink = styled(props => <Link {...props} />)`
   height: 50px;
   text-transform: uppercase;
   font-size: 12px;
-  box-shadow: 0 2px 9px #8963e3;
+  box-shadow: 0 2px 9px rgba(95, 121, 246, 0.8);
   font-weight: 900;
   letter-spacing: 0.83px;
   line-height: 12px;
@@ -80,7 +80,7 @@ const ButtonLinkGradient = styled(props => <Link {...props} />)`
   height: 50px;
   text-transform: uppercase;
   font-size: 12px;
-  box-shadow: 0 2px 9px #8963e3;
+  box-shadow: 0 2px 9px rgba(95, 121, 246, 0.8);
   font-weight: 900;
   letter-spacing: 0.83px;
   line-height: 12px;

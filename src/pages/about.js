@@ -43,33 +43,25 @@ const About = () => (
     <HexWrap>
       <HexItemWrap>
         <Hexagon>
-          <IconWrap>
-            <Image name="dragon" />
-          </IconWrap>
+          <IconWrap></IconWrap>
         </Hexagon>
         <HexHeading>Data</HexHeading>
       </HexItemWrap>
       <HexItemWrap>
         <Hexagon>
-          <IconWrap>
-            <Image name="dragon" />
-          </IconWrap>
+          <IconWrap></IconWrap>
         </Hexagon>
         <HexHeading>Platforma</HexHeading>
       </HexItemWrap>
       <HexItemWrap>
         <Hexagon>
-          <IconWrap>
-            <Image name="dragon" />
-          </IconWrap>
+          <IconWrap></IconWrap>
         </Hexagon>
         <HexHeading>Wpisowe</HexHeading>
       </HexItemWrap>
       <HexItemWrap>
         <Hexagon>
-          <IconWrap>
-            <Image name="dragon" />
-          </IconWrap>
+          <IconWrap></IconWrap>
         </Hexagon>
         <HexHeading>Miejsce</HexHeading>
       </HexItemWrap>
