@@ -77,9 +77,9 @@ const NavigationListItem = styled.li`
 const NavList = ({ open, setOpen }) => {
   return (
     <Ul open={open}>
-      <NavigationListItem onClick={() => setOpen(false)}>
+      {/* <NavigationListItem onClick={() => setOpen(false)}>
         <Link to="/about">O turnieju</Link>
-      </NavigationListItem>
+      </NavigationListItem> */}
       {/* <NavigationListItem>
         <Link  to="/faq">
           FAQ

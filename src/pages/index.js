@@ -35,10 +35,10 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <h1>Największy turniej zrzeszający Polskich graczy Mortal Kombat 11</h1>
-    <ButtonWrap>
+    {/* <ButtonWrap>
       <Button linkTo="#contactForm" text="Zapisz się" />
       <Button linkTo="/about" bordered text="Dowiedz się więcej" />
-    </ButtonWrap>
+    </ButtonWrap> */}
     {/* <Button sizeL linkTo={"/#"} text={"Zapisz się na turniej!"} bordered>
       See Testimonials
     </Button> */}
