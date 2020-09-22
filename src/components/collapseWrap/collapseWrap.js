@@ -7,39 +7,51 @@ const Wrapper = styled.div`
 const CollapseWrap = () => {
   const [faqs, setFaqs] = useState([
     {
-      question: "a?",
+      question: "Kiedy odbędzie się turniej?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Turniej odbędzie się 17 października, na platformie PS4 online. Jeśli jesteś nowy na discordzie, pamiętaj aby podać organizatorom swój nick na PSN. Znacznie ułatwi nam to pracę.",
       open: false,
     },
     {
-      question: "b?",
+      question: "O której godzinie się zaczyna?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Startujemy o godzinie 14. Zawodnikom przypominamy, że check-in należy wykonać na około pół godziny przed startem turnieju.",
       open: false,
     },
     {
-      question: "c?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      question:
+        "Jaka jest wysokość wpisowego? Na co przeznaczona jest ta kwota?",
+      answer: "20 zł. Całość kwoty jest przeznaczona na nagrody.",
       open: false,
     },
     {
-      question: "d?",
+      question: "Co jeśli mogę grać tylko na wifi?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Nie ograniczamy naszych zawodników do konieczności używania kabla, natomiast zwracamy uwagę, że jeśli rozgrywka nie będzie przebiegać płynnie, możemy zdecydować o wydaleniu Cię z turnieju. Nigdy natomiast do takiej sytuacji nie doszło. W jakis sposób rozwiązujemy takie spory dowiesz się w zakładce 'Regulamin'.",
       open: false,
     },
     {
-      question: "e?",
+      question: "Jakie wymagania muszę spełniać aby wziąć udział w turnieju?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Jedynym warunkiem koniecznym jest dołączenie do Discorda Polska Scena NRS pod tym linkiem https://discord.gg/CSJCy2 . To tutaj na bieżąco komunikujemy się z graczami, przekazujemy nowe informacje i informujemy o zmianach.",
       open: false,
     },
     {
-      question: "f?",
+      question: "Gdzie mogę sprawdzić z kim gram?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Zajrzyj na naszego smasha - https://smash.gg/tournament/the-kombat-showdown. 12 października zamykamy zapisy, więc już następnego dnia będziesz dokładnie wiedzieć z kim grasz.",
+      open: false,
+    },
+    {
+      question: "Co jeśli zdecyduje się zapisać po 12 października?",
+      answer:
+        "Jako organizatorzy decydujemy się ograniczać ilość wolnych miejsc na zapisy, aby turniej przebiegał tak sprawnie jak się tylko da. Jeśli po wskazanej dacie zdecydujesz się dołączyć a będzie miejsce, postaramy się dopisać Cię w wolne miejsce. W przypadku pełnego obstawienia miejsc, trafisz na listę rezerwową.",
+      open: false,
+    },
+    {
+      question: "Czy wydarzenie będzie można gdzieś obejrzeć?",
+      answer:
+        "Jasne! Nasza ekipa ciężko pracuje aby dopieszczać nasze transmisje i zapewnić zabawę nie tylko grającym ale i oglądającym. Oglądać nas możesz na kanale https://www.twitch.tv/thekombatshowdown",
       open: false,
     },
   ])

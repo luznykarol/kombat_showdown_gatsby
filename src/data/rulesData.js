@@ -6,7 +6,8 @@ const rulesData = {
       `1.Turniej będzie odbywał się w systemie Double Elimination (Grupy + Top8).`,
       `2.W grupach mecze odbywają się systemem FT2, natomiast w top8 FT3.`,
       `3.Awans do top8 uzyskuje 2-óch najlepszych graczy, jeden awansuje do winners bracket, a\u00A0drugi do losers bracket.`,
-      `4.Turniej odbędzie się 23.05.2020 (sobota)`,
+      `4.Turniej odbędzie się 17.10.2020 (sobota) `,
+      `5.Planowana godzina rozpoczęcia turnieju to 14:00`,
     ],
   },
   match: {
@@ -46,7 +47,7 @@ Jeżeli w ciągu całego turnieju gracz zostanie zgłoszony przez 3 graczy, z po
     text: [
       `1.Zabronione jest spamowanie na kanałach turniejowych na których przeciwnicy stawiają się do meczu oraz zgłaszają wyniki, wszelakie luźne dyskusje będą toczyły się na kanale “The\u00A0Kombat Showdown”. W przypadku nie stosowania się do powyższego organizator zastrzega sobie prawo do wydalenia takiej osoby z turnieju.`,
       `2.Organizator turnieju zastrzega sobie prawo do anulowania, zawieszenia i / lub modyfikacji zawodów lub dowolnej jego części, jeżeli jakiekolwiek oszustwo, awarie techniczne lub inne czynniki naruszają integralność lub prawidłowe funkcjonowanie zawodów.`,
-      `3.Organizator zastrzega sobie prawo do zamknięcia zapisów ze względu na zbyt dużą ilość graczy, oraz na rozłożenie turnieju na 2 dni to jest 23.05 (sobota) oraz 24.05 (niedziela).`,
+      `3.Organizator zastrzega sobie prawo do zamknięcia zapisów ze względu na zbyt dużą ilość graczy, oraz na rozłożenie turnieju na 2 dni to jest 17.10 (sobota) oraz 18.10 (niedziela).`,
     ],
   },
   stream: {

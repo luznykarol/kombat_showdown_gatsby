@@ -33,7 +33,8 @@ const InputRow = styled.div`
     border: 2px solid rgba(75, 89, 123, 0.8);
     background: #fff;
     transition: 0.5s all linear;
-
+    font-size: 16px;
+    color: #4b597b;
     &:focus,
     :active {
       box-shadow: 0 0px 8px rgba(95, 121, 246, 0.8);
@@ -41,6 +42,7 @@ const InputRow = styled.div`
 
     &:placeholder {
       color: rgba(75, 89, 123, 0.8);
+      font-size: 11px;
     }
   }
   display: flex;

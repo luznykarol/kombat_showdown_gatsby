@@ -80,11 +80,9 @@ const NavList = ({ open, setOpen }) => {
       {/* <NavigationListItem onClick={() => setOpen(false)}>
         <Link to="/about">O turnieju</Link>
       </NavigationListItem> */}
-      {/* <NavigationListItem>
-        <Link  to="/faq">
-          FAQ
-        </Link>
-      </NavigationListItem> */}
+      <NavigationListItem onClick={() => setOpen(false)}>
+        <Link to="/faq">FAQ</Link>
+      </NavigationListItem>
       <NavigationListItem onClick={() => setOpen(false)}>
         <Link to="/rules">Regulamin</Link>
       </NavigationListItem>

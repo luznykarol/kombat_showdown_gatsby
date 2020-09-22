@@ -33,7 +33,7 @@ const ButtonWrap = styled.div`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="The Kombat Showdown / Home" />
     <h1>Największy turniej zrzeszający Polskich graczy Mortal Kombat 11</h1>
     {/* <ButtonWrap>
       <Button linkTo="#contactForm" text="Zapisz się" />

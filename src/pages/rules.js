@@ -23,7 +23,7 @@ const RulesList = styled.ul`
 
 const Rules = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="The Kombat Showdown / Rules" />
     <h1>Regulamin Turnieju</h1>
     <Card>
       <h3>{rulesData.details.title}</h3>
