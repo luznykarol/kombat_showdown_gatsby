@@ -23,18 +23,18 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-less`,
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Alatsi`,
-    //         subsets: [`latin`],
-    //         variants: [`400`, `500`, `600`, `700`, `800`],
-    //       },
-    //     ],
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Alatsi`,
+            subsets: [`latin`, "latin-ext"],
+            variants: [`400`, `500`, `600`, `700`, `800`],
+          },
+        ],
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
