@@ -21,12 +21,14 @@ const LogoWrap = styled(props => <Link {...props} />)`
 
 const Navbar = () => {
   return (
-    <Nav>
-      <LogoWrap to="/">
-        <Image loading="eager" critical="true" name="logoTitle"></Image>
-      </LogoWrap>
-      <Burger />
-    </Nav>
+    <div className="wrapper wrapper-top">
+      <Nav>
+        <LogoWrap to="/">
+          <Image loading="eager" critical="true" name="logoTitle"></Image>
+        </LogoWrap>
+        <Burger />
+      </Nav>
+    </div>
   )
 }
 

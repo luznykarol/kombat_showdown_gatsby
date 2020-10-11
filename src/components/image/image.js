@@ -41,6 +41,18 @@ const Image = props => {
       dragon: file(relativePath: { eq: "icons/szmok.png" }) {
         ...fluidImage
       }
+      date: file(relativePath: { eq: "icons/data.png" }) {
+        ...fluidImage
+      }
+      platform: file(relativePath: { eq: "icons/platforma.png" }) {
+        ...fluidImage
+      }
+      fee: file(relativePath: { eq: "icons/wpisowe.png" }) {
+        ...fluidImage
+      }
+      mklogo: file(relativePath: { eq: "mklogo.png" }) {
+        ...fluidImage
+      }
     }
   `)
 

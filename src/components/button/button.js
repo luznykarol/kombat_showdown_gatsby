@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const ButtonGradient = styled.button`
   padding: 0 20px;
-  border-radius: 5px;
+
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@ const ButtonGradient = styled.button`
   max-width: 220px;
   width: 100%;
   margin: 0 auto;
-  background-image: linear-gradient(-45deg, #111167 0%, #5f79f6 100%);
+  background-color: #111167;
   border: none;
   outline: none;
 
@@ -36,7 +36,7 @@ const ButtonGradient = styled.button`
 
 const ButtonLink = styled(props => <Link {...props} />)`
   padding: 0 20px;
-  border-radius: 5px;
+
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -67,7 +67,7 @@ const ButtonLink = styled(props => <Link {...props} />)`
 
 const ButtonLinkGradient = styled(props => <Link {...props} />)`
   padding: 0 20px;
-  border-radius: 5px;
+
   cursor: pointer;
   display: flex;
   justify-content: center;

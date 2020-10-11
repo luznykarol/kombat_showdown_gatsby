@@ -37,18 +37,16 @@ const Layout = ({ children }) => {
   const Wrapper = styled.div`
     ${"" /* min-height: 100%; */}
     min-height: 800px;
-    max-width: 1185px;
-    width: 100%;
-    padding: 30px 30px 0 30px;
+    overflow-x: hidden;
     height: 100%;
     ${"" /* margin: 0 auto -100px auto; */}
     margin: 0 auto;
     position: relative;
     z-index: 100;
 
-    @media (max-width: 414px) {
+    ${"" /* @media (max-width: 414px) {
       padding: 15px 15px 0;
-    }
+    } */}
   `
 
   const Bg = styled.div`
@@ -70,7 +68,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Background page={"starsbg"}></Background>
+      <Background className="topBg" page={"starsbg"}></Background>
       <Bg></Bg>
       <Wrapper>
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}

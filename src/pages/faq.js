@@ -8,8 +8,13 @@ const Faq = () => {
     <Layout>
       <SEO title="The Kombat Showdown / FAQ" />
       <>
-        <h1>FAQ</h1>
-        <CollapseWrap></CollapseWrap>
+        <div className="wrapper">
+          <section className="hero">
+            {" "}
+            <h1>FAQ</h1>
+          </section>
+          <CollapseWrap></CollapseWrap>
+        </div>
       </>
     </Layout>
   )

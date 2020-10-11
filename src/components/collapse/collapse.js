@@ -49,7 +49,7 @@ const Collapse = ({ faq, index, toggleFAQ }) => {
           <path
             d="M6 7l6 6l6-6l2 2l-8 8l-8-8z"
             fill="#626262"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           />
         </svg>
       </CollapseIcon>

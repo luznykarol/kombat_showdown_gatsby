@@ -24,54 +24,60 @@ const RulesList = styled.ul`
 const Rules = () => (
   <Layout>
     <SEO title="The Kombat Showdown / Rules" />
-    <h1>Regulamin Turnieju</h1>
-    <Card>
-      <h3>{rulesData.details.title}</h3>
-      <RulesList>
-        {rulesData.details.text.map(i => (
-          <li>{i}</li>
-        ))}
-      </RulesList>
+    <div className="wrapper">
+      {" "}
+      <section className="hero">
+        {" "}
+        <h1>Regulamin Turnieju</h1>
+      </section>
+      <Card>
+        <h3>{rulesData.details.title}</h3>
+        <RulesList>
+          {rulesData.details.text.map(i => (
+            <li key={i}>{i}</li>
+          ))}
+        </RulesList>
 
-      <h3>{rulesData.match.title}</h3>
-      <RulesList>
-        {rulesData.match.text.map(i => (
-          <li>{i}</li>
-        ))}
-        <li>
-          <ul>
-            {rulesData.match.subText.map(i => (
-              <li>{i}</li>
-            ))}
-          </ul>
-        </li>
-      </RulesList>
-      <h3>{rulesData.punctuality.title}</h3>
-      <RulesList>
-        {rulesData.punctuality.text.map(i => (
-          <li>{i}</li>
-        ))}
-      </RulesList>
+        <h3>{rulesData.match.title}</h3>
+        <RulesList>
+          {rulesData.match.text.map(i => (
+            <li key={i}>{i}</li>
+          ))}
+          <li>
+            <ul>
+              {rulesData.match.subText.map(i => (
+                <li key={i}>{i}</li>
+              ))}
+            </ul>
+          </li>
+        </RulesList>
+        <h3>{rulesData.punctuality.title}</h3>
+        <RulesList>
+          {rulesData.punctuality.text.map(i => (
+            <li key={i}>{i}</li>
+          ))}
+        </RulesList>
 
-      <h3>{rulesData.results.title}</h3>
-      <RulesList>
-        {rulesData.results.text.map(i => (
-          <li>{i}</li>
-        ))}
-      </RulesList>
+        <h3>{rulesData.results.title}</h3>
+        <RulesList>
+          {rulesData.results.text.map(i => (
+            <li key={i}>{i}</li>
+          ))}
+        </RulesList>
 
-      <h3>{rulesData.rest.title}</h3>
-      <RulesList>
-        {rulesData.rest.text.map(i => (
-          <li>{i}</li>
-        ))}
-      </RulesList>
+        <h3>{rulesData.rest.title}</h3>
+        <RulesList>
+          {rulesData.rest.text.map(i => (
+            <li key={i}>{i}</li>
+          ))}
+        </RulesList>
 
-      <h3>{rulesData.stream.title}</h3>
-      <RulesList>
-        <li>{rulesData.stream.text}</li>
-      </RulesList>
-    </Card>
+        <h3>{rulesData.stream.title}</h3>
+        <RulesList>
+          <li>{rulesData.stream.text}</li>
+        </RulesList>
+      </Card>
+    </div>
   </Layout>
 )
 

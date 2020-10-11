@@ -24,19 +24,25 @@ const Background = ({ children, page, shapes, className }) => {
       starsbg: file(relativePath: { eq: "bg/3.png" }) {
         ...fluidImageBg
       }
+      subzero1: file(relativePath: { eq: "bg/subzero_bg_1.jpg" }) {
+        ...fluidImageBg
+      }
+      subzero2: file(relativePath: { eq: "bg/subzero_bg_2.jpg" }) {
+        ...fluidImageBg
+      }
     }
   `)
   return (
     <BackgroundImage
       // className="dupa"
-      // className={className}
+      className={className}
       fluid={data[page].childImageSharp.fluid}
       backgroundColor={`white`}
       style={{
         // Defaults are overwrite-able by setting one or each of the following:
         // position: "absolute",
         zIndex: "0",
-        backgroundPosition: "",
+        backgroundPosition: "center center",
         height: "100%",
         position: "absolute",
         width: "100%",

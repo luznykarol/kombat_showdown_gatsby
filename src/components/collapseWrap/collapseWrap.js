@@ -15,7 +15,7 @@ const CollapseWrap = () => {
     {
       question: "O której godzinie się zaczyna?",
       answer:
-        "Startujemy o godzinie 14. Zawodnikom przypominamy, że check-in należy wykonać na około pół godziny przed startem turnieju.",
+        "Startujemy o godzinie 14:00. Zawodnikom przypominamy, że check-in należy wykonać na około pół godziny przed startem turnieju.",
       open: false,
     },
     {
