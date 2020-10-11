@@ -183,7 +183,7 @@ const Navigation = () => {
         <SocialWrap>
           <SocialList>
             <SocialTwitch
-              href="https://m.twitch.tv/thekombatshowdown/profile"
+              href="https://twitch.tv/thekombatshowdown/profile"
               target="_blank"
               noopener="noreferrer"
             >
