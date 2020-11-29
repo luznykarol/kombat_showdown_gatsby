@@ -6,7 +6,7 @@ const rulesData = {
       `1.Turniej będzie odbywał się w systemie Double Elimination (Grupy + Top8).`,
       `2.W grupach mecze odbywają się systemem FT2, natomiast w top8 FT3.`,
       `3.Awans do top8 uzyskuje 2-óch najlepszych graczy, jeden awansuje do winners bracket, a\u00A0drugi do losers bracket.`,
-      `4.Turniej odbędzie się 17.10.2020 (sobota) `,
+      `4.Turniej odbędzie się w dniach 9-10.01.2021 (sobota-niedziela) `,
       `5.Planowana godzina rozpoczęcia turnieju to 14:00`,
     ],
   },
@@ -16,7 +16,7 @@ const rulesData = {
       `1. Czas rundy: 90 sekund.`,
       `2. Wybór areny losowy (random select).`,
       `
-          3. Tylko przegrany może zmienić postać.`,
+      3. Tylko przegrany może zmienić postać.`,
       `4. Wariacje: Wariacje trybu turniejowego.`,
       `5. W przypadku rozłączenia się któregoś z graczy, mecz należy rozpatrzeć według następujących czynników:`,
     ],
@@ -47,7 +47,7 @@ Jeżeli w ciągu całego turnieju gracz zostanie zgłoszony przez 3 graczy, z po
     text: [
       `1.Zabronione jest spamowanie na kanałach turniejowych na których przeciwnicy stawiają się do meczu oraz zgłaszają wyniki, wszelakie luźne dyskusje będą toczyły się na kanale “The\u00A0Kombat Showdown”. W przypadku nie stosowania się do powyższego organizator zastrzega sobie prawo do wydalenia takiej osoby z turnieju.`,
       `2.Organizator turnieju zastrzega sobie prawo do anulowania, zawieszenia i / lub modyfikacji zawodów lub dowolnej jego części, jeżeli jakiekolwiek oszustwo, awarie techniczne lub inne czynniki naruszają integralność lub prawidłowe funkcjonowanie zawodów.`,
-      `3.Organizator zastrzega sobie prawo do zamknięcia zapisów ze względu na zbyt dużą ilość graczy, oraz na rozłożenie turnieju na 2 dni to jest 17.10 (sobota) oraz 18.10 (niedziela).`,
+      `3.Organizator zastrzega sobie prawo do zamknięcia zapisów ze względu na zbyt dużą ilość graczy, oraz na rozłożenie turnieju na 2 dni to jest 09.01 (sobota) oraz 10.01 (niedziela).`,
     ],
   },
   stream: {
