@@ -35,6 +35,20 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Alatsi",
+              subsets: [`latin`, "latin-ext"],
+              variants: [`400`, `500`, `600`, `700`, `800`],
+            },
+          ],
+        },
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
