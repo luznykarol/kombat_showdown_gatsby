@@ -24,18 +24,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-less`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Alatsi`,
-            subsets: [`latin`, "latin-ext"],
-            variants: [`400`, `500`, `600`, `700`, `800`],
-          },
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-webfonts`,
       options: {
         fonts: {
