@@ -9,7 +9,7 @@ const CollapseWrap = () => {
     {
       question: "Kiedy odbędzie się turniej?",
       answer:
-        "Turniej odbędzie się 17 października, na platformie PS4 online. Jeśli jesteś nowy na discordzie, pamiętaj aby podać organizatorom swój nick na PSN. Znacznie ułatwi nam to pracę.",
+        "Turniej odbędzie się w dniach 9-10 stycznia 2021, na platformie PS4 online. Jeśli jesteś nowy na discordzie, pamiętaj aby podać organizatorom swój nick na PSN. Znacznie ułatwi nam to pracę.",
       open: false,
     },
     {
@@ -21,7 +21,7 @@ const CollapseWrap = () => {
     {
       question:
         "Jaka jest wysokość wpisowego? Na co przeznaczona jest ta kwota?",
-      answer: "20 zł. Całość kwoty jest przeznaczona na nagrody.",
+      answer: "30 zł. Całość kwoty jest przeznaczona na nagrody.",
       open: false,
     },
     {
@@ -39,11 +39,11 @@ const CollapseWrap = () => {
     {
       question: "Gdzie mogę sprawdzić z kim gram?",
       answer:
-        "Zajrzyj na naszego smasha - https://smash.gg/tournament/the-kombat-showdown. 12 października zamykamy zapisy, więc już następnego dnia będziesz dokładnie wiedzieć z kim grasz.",
+        "Zajrzyj na naszego smasha - https://smash.gg/tournament/the-kombat-showdown. 6 stycznia o godzinie 20:00 zamykamy zapisy, więc już następnego dnia będziesz dokładnie wiedzieć z kim grasz.",
       open: false,
     },
     {
-      question: "Co jeśli zdecyduje się zapisać po 12 października?",
+      question: "Co jeśli zdecyduje się zapisać po 6 stycznia?",
       answer:
         "Jako organizatorzy decydujemy się ograniczać ilość wolnych miejsc na zapisy, aby turniej przebiegał tak sprawnie jak się tylko da. Jeśli po wskazanej dacie zdecydujesz się dołączyć a będzie miejsce, postaramy się dopisać Cię w wolne miejsce. W przypadku pełnego obstawienia miejsc, trafisz na listę rezerwową.",
       open: false,
